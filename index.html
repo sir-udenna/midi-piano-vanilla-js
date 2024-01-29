@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="script.js" defer></script>
+		<link rel="stylesheet" href="styles.css" />
+		<link rel="icon" href="./assets/images/favicon.ico" />
+		<link rel="manifest" href="./manifest.json" />
+		<title>Midi Piano</title>
+	</head>
+	<body>
+		<main>
+			<div class="piano">
+				<div class="piano__settings">
+					<div class="oscillator">
+						<select name="oscillator-type" id="oscillator-type">
+							<option value="sine" selected>Sine</option>
+							<option value="square">Square</option>
+							<option value="sawtooth">Sawtooth</option>
+							<option value="triangle">triangle</option>
+						</select>
+					</div>
+				</div>
+				<div class="piano__keys">
+					<div data-note="C4" class="key white">
+						<div class="key__note">
+							<span>C<sub>4</sub></span>
+						</div>
+					</div>
+					<div data-note="Db4" class="key black">
+						<div class="key__note">
+							<span>D<sup>b</sup><sub>4</sub></span>
+						</div>
+					</div>
+					<div data-note="D4" class="key white">
+						<div class="key__note">
+							<span>D<sub>4</sub></span>
+						</div>
+					</div>
+					<div data-note="Eb4" class="key black">
+						<div class="key__note">
+							<span>E<sup>b</sup><sub>4</sub></span>
+						</div>
+					</div>
+					<div data-note="E4" class="key white">
+						<div class="key__note">
+							<span>E<sub>4</sub></span>
+						</div>
+					</div>
+					<div data-note="F4" class="key white">
+						<div class="key__note">
+							<span>F<sub>4</sub></span>
+						</div>
+					</div>
+					<div data-note="Gb4" class="key black">
+						<div class="key__note">
+							<span>G<sup>b</sup><sub>4</sub></span>
+						</div>
+					</div>
+					<div data-note="G4" class="key white">
+						<div class="key__note">
+							<span>G<sub>4</sub></span>
+						</div>
+					</div>
+					<div data-note="Ab4" class="key black">
+						<div class="key__note">
+							<span>A<sup>b</sup><sub>4</sub></span>
+						</div>
+					</div>
+					<div data-note="A4" class="key white">
+						<div class="key__note">
+							<span>A<sub>4</sub></span>
+						</div>
+					</div>
+					<div data-note="Bb4" class="key black">
+						<div class="key__note">
+							<span>B<sup>b</sup><sub>4</sub></span>
+						</div>
+					</div>
+					<div data-note="B4" class="key white">
+						<div class="key__note">
+							<span>B<sub>4</sub></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer>
+			<span>
+				<a class="social" href="https://github.com/NestorV95">
+					<img alt="github" src="./assets/icons/github.svg"/>
+				</a>
+			</span>
+			<span>
+				<a class="social" href="https://www.linkedin.com/in/nestor-venegas-se/">
+					<img alt="linkedin" src="./assets/icons/linkedin.svg"/>
+				</a>
+			</span>
+		</footer>
+	</body>
+</html>
