@@ -63,10 +63,6 @@ KEYS.forEach(midiKey => {
 		midiKey.addEventListener('touchcancel', e => stopPlaying());
 	});
 	
-	midiKey.addEventListener('touchend', e => {
-		if (isPlaying) stopPlaying();
-	});
-	
 });
 
 let oscillatorType = 'sine';
