@@ -15,7 +15,7 @@ body {
 }
 
 main {
-	min-height: calc(100vh - 5rem);
+	min-height: calc(100vh - 2.5rem);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -26,7 +26,7 @@ footer {
 	justify-content: center;
 	align-items: center;
 	gap: 0.5rem;
-	min-height: 5rem;
+	min-height: 2.5rem;
 }
 
 .piano {
@@ -43,7 +43,7 @@ footer {
 	flex-direction: row;
 	justify-content: end;
 	align-items: center;
-	padding: 1rem 0;
+	padding: 0.25rem 0;
 }
 
 .oscillator > #oscillator-type {
@@ -74,7 +74,7 @@ footer {
 }
 
 .key.white {
-	--width: 6rem;
+	--width: 4rem;
 	background-color: #ffffff;
 	border: 1px solid #333333;
 }
@@ -83,13 +83,8 @@ footer {
 	background-color: #cccccc;
 }
 
-.key.white > .key__note {
-	padding: 1rem 1rem 2rem;
-	font-size: 2.25rem;
-}
-
 .key.black {
-	--width: 4rem;
+	--width: 2.75rem;
 	background-color: black;
 	margin: 0 calc(var(--width) / -2);
 	z-index: 2;
@@ -99,9 +94,12 @@ footer {
 	background-color: #333333;
 }
 
-.key.black > .key__note {
+.key__note{
 	padding: 1rem;
 	font-size: 1.5rem;
+}
+
+.key.black > .key__note {
 	color: #ffffff;
 }
 
