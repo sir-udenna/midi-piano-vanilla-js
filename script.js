@@ -53,6 +53,19 @@ KEYS.forEach(midiKey => {
 	midiKey.addEventListener('mouseout', e => { 
 		if (isPlaying) stopPlaying();
 	});
+
+	midiKey.addEventListener('touchstart', e => {
+		startPlaying()
+		midiKey.addEventListener('touchmove', e => {
+			if (isPlaying) stopPlaying();
+		});
+		midiKey.addEventListener('touchend', e => stopPlaying());
+		midiKey.addEventListener('touchcancel', e => stopPlaying());
+	});
+	
+	midiKey.addEventListener('touchend', e => {
+		if (isPlaying) stopPlaying();
+	});
 	
 });
 
