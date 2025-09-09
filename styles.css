@@ -36,26 +36,85 @@ footer {
 	padding: 1rem;
 	background-color: #1f1c1c;
 	border-radius: 0.5rem;
+	max-width: 100vw;
+	overflow-x: auto;
 }
 
 .piano__settings {
 	display: flex;
 	flex-direction: row;
-	justify-content: end;
+	justify-content: space-between;
 	align-items: center;
 	padding: 0.25rem 0;
+	gap: 1rem;
+	flex-wrap: wrap;
 }
 
-.oscillator > #oscillator-type {
+.oscillator,
+.midi-controls {
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
+	align-items: center;
+}
+
+.oscillator label,
+.midi-controls label {
+	color: #b28af3;
+	font-size: 0.8rem;
+	font-family: 'Courier New', Courier, monospace;
+	font-weight: bold;
+	margin-bottom: 0.25rem;
+}
+
+.oscillator > #oscillator-type,
+.midi-controls > #midi-device-select {
 	background-color: #b28af3;
 	font-size: 1rem;
 	font-family: 'Courier New', Courier, monospace;
+	text-align: center;
 	border: none;
+	border-radius: 0.25rem;
+	padding: 0.25rem;
+	width: 8rem;
+	cursor: pointer;
 	outline: none;
+}
+
+.midi-status {
+	color: #b28af3;
+	font-size: 0.7rem;
+	font-family: 'Courier New', Courier, monospace;
+	text-align: center;
+	max-width: 8rem;
+	word-wrap: break-word;
+}
+
+.keyboard-info {
+	color: #b28af3;
+	font-size: 0.8rem;
+	font-family: 'Courier New', Courier, monospace;
+}
+
+.keyboard-info details {
+	cursor: pointer;
+}
+
+.keyboard-info summary {
+	font-weight: bold;
+	margin-bottom: 0.5rem;
+}
+
+.keyboard-info p {
+	margin: 0;
+	line-height: 1.4;
 }
 
 .piano__keys {
 	display: flex;
+	min-width: min-content;
+	overflow-x: auto;
+	padding-bottom: 0.5rem;
 }
 
 .key {
@@ -74,9 +133,10 @@ footer {
 }
 
 .key.white {
-	--width: 4rem;
+	--width: 3rem;
 	background-color: #ffffff;
 	border: 1px solid #333333;
+	flex-shrink: 0;
 }
 
 .key.white.active {
@@ -84,10 +144,11 @@ footer {
 }
 
 .key.black {
-	--width: 2.75rem;
+	--width: 2rem;
 	background-color: black;
 	margin: 0 calc(var(--width) / -2);
 	z-index: 2;
+	flex-shrink: 0;
 }
 
 .key.black.active {
@@ -115,4 +176,51 @@ a.social > img {
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+	padding: 0.25rem;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+	.piano {
+		padding: 0.5rem;
+		margin: 0.5rem;
+	}
+	
+	.key.white {
+		--width: 2.5rem;
+	}
+	
+	.key.black {
+		--width: 1.5rem;
+	}
+	
+	.key__note {
+		font-size: 0.8rem;
+		padding: 0.1rem;
+	}
+	
+	.piano__settings {
+		flex-direction: column;
+		gap: 0.5rem;
+		align-items: stretch;
+	}
+	
+	.oscillator,
+	.midi-controls {
+		align-items: center;
+	}
+}
+
+@media (max-width: 480px) {
+	.key.white {
+		--width: 2rem;
+	}
+	
+	.key.black {
+		--width: 1.2rem;
+	}
+	
+	.key__note {
+		font-size: 0.7rem;
+	}
 }
